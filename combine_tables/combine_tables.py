@@ -38,9 +38,13 @@ def main():
 
     del combined_table
 
-    # Load table from file
+    # Load table from file and select rows
     combined_table = load_table(compressed_file)
 
     print(combined_table)
+
+    rows_of_interest = combined_table[combined_table.Value > 2]
+
+    print(rows_of_interest)
 
 main()
